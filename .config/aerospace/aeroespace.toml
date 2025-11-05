@@ -1,0 +1,64 @@
+[general]
+mod = "cmd"                                    # cambia a "ctrl+alt" o "cmd+alt" si lo prefieres
+start-at-login = true
+start-hidden = false
+after-login-command = []
+after-startup-command = []
+enable-normalization-flatten-containers = true
+enable-tiling = true
+enable-gaps = true
+inner-gap = 6
+outer-gap = 8
+
+# Layout
+default-root-container-layout = "tiles"
+default-root-container-orientation = "auto"
+
+[mode.main.binding]
+# Foco (vim)
+h = "focus left"
+j = "focus down"
+k = "focus up"
+l = "focus right"
+
+# Mover ventana activa
+H = "move left"
+J = "move down"
+K = "move up"
+L = "move right"
+
+# Splits (si usas modos de split)
+v = "split vertical"
+b = "split horizontal"
+
+# Fullscreen y cerrar
+enter = "fullscreen"
+w = "close"
+
+# Flotar / tile
+f = "toggle float"
+
+# Workspaces (focus)
+"1" = "workspace 1"
+"2" = "workspace 2"
+"3" = "workspace 3"
+"4" = "workspace 4"
+"5" = "workspace 5"
+"6" = "workspace 6"
+"7" = "workspace 7"
+"8" = "workspace 8"
+"9" = "workspace 9"
+
+# Enviar ventana al workspace
+"shift+1" = "move-node-to-workspace 1"
+"shift+2" = "move-node-to-workspace 2"
+"shift+3" = "move-node-to-workspace 3"
+"shift+4" = "move-node-to-workspace 4"
+"shift+5" = "move-node-to-workspace 5"
+"shift+6" = "move-node-to-workspace 6"
+"shift+7" = "move-node-to-workspace 7"
+"shift+8" = "move-node-to-workspace 8"
+"shift+9" = "move-node-to-workspace 9"
+
+# Balanceo / equalize
+e = "balance-sizes"

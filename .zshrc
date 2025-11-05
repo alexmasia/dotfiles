@@ -21,3 +21,11 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+# ~/.zshrc
+if command -v tmux >/dev/null 2>&1; then
+  # evita bucles si ya estás en tmux o en vscode
+  if [ -z "$TMUX" ] && [ -z "$VSCODE_INJECTION" ]; then
+    exec tmux
+  fi
+fi
+
