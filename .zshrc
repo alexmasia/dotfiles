@@ -29,3 +29,6 @@ if command -v tmux >/dev/null 2>&1; then
   fi
 fi
 
+
+# opencode
+export PATH=/home/faraday/.opencode/bin:$PATH
