@@ -1,6 +1,6 @@
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'gitcommit', 'markdown', 'txt' },
-	group = vim.api.nvim_create_augroup('prose_writting', { clear = true }),
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "gitcommit", "markdown", "txt" },
+	group = vim.api.nvim_create_augroup("prose_writting", { clear = true }),
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
@@ -8,35 +8,35 @@ vim.api.nvim_create_autocmd('FileType', {
 	end,
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'zsh', 'sh' },
-	group = vim.api.nvim_create_augroup('set_ft_to_bash', { clear = true }),
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "zsh", "sh" },
+	group = vim.api.nvim_create_augroup("set_ft_to_bash", { clear = true }),
 	callback = function()
-		vim.opt_local.ft = 'bash'
+		vim.opt_local.ft = "bash"
 	end,
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'dbout' },
-	group = vim.api.nvim_create_augroup('dbout_filetype_settings', { clear = true }),
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "dbout" },
+	group = vim.api.nvim_create_augroup("dbout_filetype_settings", { clear = true }),
 	callback = function()
-		vim.opt.colorcolumn = '0'
+		vim.opt.colorcolumn = "0"
 	end,
 })
 
 local function db_completion()
-	require('cmp').setup.buffer({ sources = { { name = 'vim-dadbod-completion' } } })
+	require("cmp").setup.buffer({ sources = { { name = "vim-dadbod-completion" } } })
 end
 
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'sql' },
-	group = vim.api.nvim_create_augroup('sql-dadbod-autocompletion', { clear = true }),
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "sql" },
+	group = vim.api.nvim_create_augroup("sql-dadbod-autocompletion", { clear = true }),
 	command = [[setlocal omnifunc=vim_dadbod_completion#omni]],
 })
 
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'sql', 'mysql', 'plsql' },
-	group = vim.api.nvim_create_augroup('sql-dadbod-autocompletion-1', { clear = true }),
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "sql", "mysql", "plsql" },
+	group = vim.api.nvim_create_augroup("sql-dadbod-autocompletion-1", { clear = true }),
 	callback = function()
 		vim.schedule(db_completion)
 	end,
@@ -68,31 +68,31 @@ vim.api.nvim_create_autocmd('FileType', {
 -- })
 
 -- Use an augroup to clear previous autocmds of the same group and avoid duplicates
-vim.api.nvim_create_augroup('UnfoldDboutFiles', { clear = true })
+vim.api.nvim_create_augroup("UnfoldDboutFiles", { clear = true })
 
 -- Create the autocmd
-vim.api.nvim_create_autocmd('FileType', {
+vim.api.nvim_create_autocmd("FileType", {
 	-- Specify the filetype
-	pattern = 'dbout',
+	pattern = "dbout",
 	-- Specify the command to run: 'set foldlevel=99' opens all folds
 	callback = function()
-		vim.cmd('normal! zR')
+		vim.cmd("normal! zR")
 	end,
 	-- Specify the group to use, so this autocmd is managed under 'UnfoldDboutFiles'
-	group = 'UnfoldDboutFiles',
+	group = "UnfoldDboutFiles",
 })
 
-vim.api.nvim_create_autocmd('VimEnter', {
-	group = vim.api.nvim_create_augroup('telescope_fzf_on_start', { clear = true }),
+vim.api.nvim_create_autocmd("VimEnter", {
+	group = vim.api.nvim_create_augroup("telescope_fzf_on_start", { clear = true }),
 	callback = function()
 		local function starts_with(str, start)
 			return str:sub(1, #start) == start
 		end
 
-		if starts_with(vim.bo.filetype, 'git') then
+		if starts_with(vim.bo.filetype, "git") then
 			return
 		end
 
-		require('telescope.builtin').git_files()
+		require("telescope.builtin").git_files()
 	end,
 })
