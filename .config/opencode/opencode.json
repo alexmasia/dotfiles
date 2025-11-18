@@ -13,7 +13,14 @@
         },
         "mistralai/codestral-22b-v0.1": {
           "name": "codestral-22b-v0.1"
-        }
+        },
+        "deepseek-coder-v2-lite-instruct": {
+          "name": "deepseek-coder-v2-lite-instruct"
+        },
+	"jan-v1-4b":{"name":"jan-v1-4b"},
+	"qwen/qwen3-4b-thinking-2507":{"name":"qwen/qwen3-4b-thinking-2507"},
+	"qwen/qwen3-8b":{"name":"qwen/qwen3-8b"}
+
       }
     }
   }

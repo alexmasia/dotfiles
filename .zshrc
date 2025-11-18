@@ -16,7 +16,8 @@ eval "$(oh-my-posh init zsh --config /home/faraday/.poshthemes/zen.toml)"
 alias ls="lsd"
 alias ll="lsd -la"
 alias lt="lsd --tree"
-
+alias nvconf="nvim /home/faraday/dotfiles/.config/nvim"
+alias cdproj="cd /home/faraday/projects"
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
