@@ -16,7 +16,7 @@ eval "$(oh-my-posh init zsh --config /home/faraday/.poshthemes/zen.toml)"
 alias ls="lsd"
 alias ll="lsd -la"
 alias lt="lsd --tree"
-
+alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mode()end, 100)"'
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -35,5 +35,10 @@ export PATH=/home/faraday/.opencode/bin:$PATH
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/faraday/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/faraday/.cache/lm-studio/bin"
 # End of LM Studio CLI section
 

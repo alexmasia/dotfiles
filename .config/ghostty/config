@@ -2,3 +2,16 @@
 font-family = "FiraCode Nerd Font"
 font-size = 16
 theme = "Catppuccin Mocha"
+macos-option-as-alt = true
+keybind = alt+ñ=text:~
+keybind = alt+º=text:\\
+keybind = alt+1=text:|
+keybind = alt+2=text:@
+keybind = alt+3=text:#
+keybind = alt+4=text:¢
+keybind = alt+5=text:∞
+keybind = alt+`=text:[
+keybind = alt+plus=text:]
+keybind = alt+´=text:{
+keybind = alt+ç=text:}
+keybind = alt+e=text:€
