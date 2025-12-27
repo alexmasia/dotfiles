@@ -220,3 +220,4 @@ vim.keymap.set(
 	'<Plug>(nvim-surround-delete)`x<Plug>(nvim-surround-delete)}',
 	{ silent = false, noremap = true, desc = 'remove interpolation' }
 )
+vim.keymap.set("n","<leader>md",":Glow<CR>",desc="Preview md files with Glow")
