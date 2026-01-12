@@ -16,7 +16,9 @@ eval "$(oh-my-posh init zsh --config /home/faraday/.poshthemes/zen.toml)"
 alias ls="lsd"
 alias ll="lsd -la"
 alias lt="lsd --tree"
-alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mode()end, 100)"'
+alias nvconf="nvim /home/faraday/dotfiles/.config/nvim"
+alias zshconf="nvim /home/faraday/dotfiles/.zshrc"
+alias zshsource="source /home/faraday/.zshrc"
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
