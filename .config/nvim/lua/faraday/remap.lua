@@ -226,3 +226,4 @@ vim.keymap.set("n", "<leader>cc", "<cmd>CodeCompanionChat<cr>", { desc = "CodeCo
 vim.keymap.set("v", "<leader>cc", ":'<,'>CodeCompanionChat<cr>", { desc = "CodeCompanion Chat (selection)" })
 vim.keymap.set("v", "<leader>ci", ":'<,'>CodeCompanion<cr>", { desc = "CodeCompanion Inline" })
 vim.keymap.set("n", "<leader>Y", ":%y+<CR>", { desc = "Copiar todo el fichero al portapapeles" })
+vim.keymap.set("n", "<leader><Tab>", "<cmd>b#<CR>", { desc = "Buffer anterior" })

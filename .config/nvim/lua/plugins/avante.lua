@@ -19,13 +19,13 @@ return {
 		instructions_file = "avante.md", -- opcional, pero útil
 
 		-- 👉 proveedor por defecto
-		provider = "openai",
+		provider = "ollama",
 
 		-- 🔧 aquí va LM Studio como endpoint OpenAI-compatible
 		providers = {
-			openai = {
-				endpoint = "http://localhost:1234/v1", -- LM Studio base URL :contentReference[oaicite:1]{index=1}
-				model = "qwen3-coder-30b-a3b-instruct", -- pon aquí el *model id* tal cual sale en LM Studio
+			ollama = {
+				endpoint = "http://127.0.0.1:11434", -- LM Studio base URL :contentReference[oaicite:1]{index=1}
+				model = "gurubot/gpt-oss-derestricted:20b", -- pon aquí el *model id* tal cual sale en LM Studio
 				timeout = 30000,
 				extra_request_body = {
 					temperature = 0.2,
