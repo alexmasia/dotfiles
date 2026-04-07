@@ -1,0 +1,5 @@
+{
+  "spacing": 18,
+  "layer": "top",
+  "modules-center": ["hyprland/workspaces", "clock"],
+}
