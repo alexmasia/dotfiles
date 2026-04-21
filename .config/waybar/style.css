@@ -1,3 +1,25 @@
 * {
-  all: unset;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+}
+
+window#waybar {
+  background: transparent;
+}
+#workspaces button {
+  padding: 0 5px;
+  transition: all 350ms ease-in-out;
+  background: alpha(black, 0.4);
+  border-bottom: 3px solid transparent;
+  border-radius: 10;
+  color: white;
+}
+
+#workspaces button.active {
+  background: white;
+  transition: all 350ms ease-in-out;
+  color: black;
+  min-width: 50px;
 }
