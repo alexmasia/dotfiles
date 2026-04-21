@@ -22,8 +22,13 @@
     "ollama": {
       "models": {
         "devstral": {
-          "_launch": true,
           "name": "devstral"
+        },
+        "gemma4:e4b": {
+          "name": "gemma4:e4b",
+          "options": {
+            "num_ctx": 65536
+          }
         }
       },
       "name": "Ollama (local)",

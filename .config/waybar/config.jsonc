@@ -6,7 +6,7 @@
   "margin-right": 10,
   "margin-left": 10,
   "modules-center": ["clock", "sway/language", "idle_inhibitor"],
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "cava"],
   "modules-right": [
     "temperature",
     "load",
@@ -48,6 +48,28 @@
   "custom/power": {
     "format": " ⏻ ",
     "tooltip": false,
-    "on-click": "wlogout --protocol layer-shell",
+    "on-click": "/home/faraday/.config/rofi/scripts/powermenu_t6",
+  },
+  "cava": {
+    "framerate": 60,
+    "autosens": 1,
+    "sensitivity": 1,
+    "bars": 24,
+    "lower_cutoff_freq": 440,
+    "higher_cutoff_freq": 4400,
+    "method": "pipewire",
+    "source": "auto",
+    "stereo": false,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": true,
+    "waves": false,
+    "noise_reduction": 0.77,
+    "hide_on_silence": true,
+    "input_delay": 2,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "actions": {
+      "on-click-right": "mode",
+    },
   },
 }
