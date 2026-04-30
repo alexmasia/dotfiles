@@ -8,6 +8,10 @@
 window#waybar {
   background: transparent;
 }
+
+.modules-center,
+.modules-right {
+}
 #workspaces button {
   padding: 0 5px;
   transition: all 350ms ease-in-out;
